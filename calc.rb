@@ -33,7 +33,7 @@ def second_number
     second_number
   end
 end
-
+until @clear == 'quit'
 first_number
 mod 
 second_number
@@ -80,7 +80,8 @@ puts "Answer is #{@final_num}"
 @nums_array << @final_num
 puts @nums_array
 
-puts "Type clear to clear screen or continue to enter another operation"
+puts "Type clear to clear screen or continue to enter another operation
+with the same number. Type 'quit' at any time to exit the program"
 @clear = gets.chomp
 if @clear == 'continue'
   @first_num = @nums_array[0]
@@ -96,7 +97,11 @@ elsif @clear == 'clear'
   second_number
   calculate
   puts "Answer is #{@final_num}"
+elsif @clear == 'quit'
+  exit
 end
+end
+
 
 
 
